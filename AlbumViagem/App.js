@@ -43,7 +43,7 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.title}>Álbum de Viagem</Text>
 
-      {/* FlatList */}
+      
       <FlatList
         data={lugares}
         keyExtractor={(item) => item.id}
@@ -63,8 +63,7 @@ export default function App() {
           </TouchableOpacity>
         )}
       />
-
-      {/* Modal para detalhes */}
+    
 <Modal visible={modalVisible} transparent={true}>
   <View style={styles.modalView}>
     <Image source={{ uri: imagemSelecionada }} style={styles.modalImage} />
@@ -80,7 +79,7 @@ export default function App() {
   </View>
 </Modal>
 
-      {/* Modal para adicionar lugar */}
+      
       <Modal visible={adicionarModalVisible} transparent={true}>
         <View style={styles.modalView}>
           <Text style={styles.modalTitle}>Adicionar Novo Lugar</Text>
@@ -107,7 +106,7 @@ export default function App() {
         </View>
       </Modal>
 
-      {/* Botão para abrir o modal de adicionar lugar */}
+      
       <TouchableOpacity style={styles.addButton} onPress={() => setAdicionarModalVisible(true)}>
   <Text style={styles.addButtonText}>+ Adicionar Lugar</Text>
       </TouchableOpacity>
@@ -185,32 +184,32 @@ const styles = StyleSheet.create({
     borderColor: '#ccc',
   },
   addButton: {
-    backgroundColor: '#4CAF50', // Verde moderno
+    backgroundColor: '#4CAF50', 
     paddingVertical: 12,
     paddingHorizontal: 20,
-    borderRadius: 25, // Bordas arredondadas
+    borderRadius: 25, 
     alignItems: 'center',
     justifyContent: 'center',
-    alignSelf: 'center', // Centraliza o botão
+    alignSelf: 'center', 
     marginTop: 20,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 4,
-    elevation: 5, // Sombra para Android
+    elevation: 5, 
   },
   addButtonText: {
-    color: '#fff', // Texto branco
+    color: '#fff', 
     fontSize: 16,
-    fontWeight: '600', // Peso médio
-    textTransform: 'uppercase', // Texto em maiúsculas
-    letterSpacing: 1, // Espaçamento entre letras
+    fontWeight: '600',
+    textTransform: 'uppercase', 
+    letterSpacing: 1,
   },
   removeButton: {
-    backgroundColor: '#ff4d4d', // Vermelho para destacar
+    backgroundColor: '#ff4d4d', 
     paddingVertical: 10,
     paddingHorizontal: 20,
-    borderRadius: 25, // Bordas arredondadas
+    borderRadius: 25, 
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 15,
@@ -218,10 +217,10 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 4,
-    elevation: 5, // Sombra para Android
+    elevation: 5, 
   },
   removeButtonText: {
-    color: '#fff', // Texto branco
+    color: '#fff', 
     fontSize: 16,
     fontWeight: '600',
     textTransform: 'uppercase',
